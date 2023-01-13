@@ -1,4 +1,14 @@
-@charset: "UTF-8";
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--font001);
+}
 
 @font-face {
     font-family: 'Sriracha';
@@ -10,4 +20,72 @@
     font-family: 'Passion One';
     src: url(fontes/Passion_One/PassionOne-Bold.ttf) format('opentype');
     font-weight: normal;
+}
+
+:root{
+    --font001: Verdana, Geneva, Tahoma, sans-serif;
+    --font002: 'Passion One', serif;
+    --font003: 'Sriracha', serif
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+    padding-top: 50px;
+    font-variant: small-caps; /* Transforma letras em maiusculas so que as primeiras letras ficam maiores //  podemos fazer isso usando também a tag text-transform: uppercase (poren ela fica de forma mais gritande com todas as letras maiusculas do mesmo tamanho)*/
+    font-family:var(--font002);
+    font-size: 10vw;
+}
+
+header > p{
+    padding-bottom: 50px;
+    font-family: var(--font001);
+    font-weight: normal;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--font003);
+    font-weight: normal;
+    font-size: 3.5vw;
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+section.imagem > p{
+    background-color: rgba(0, 0, 0, 0.205);
+    display: inline-block;
+    padding: 5px;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
 }
